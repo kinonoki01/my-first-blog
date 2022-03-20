@@ -17,5 +17,15 @@
         <h2><a href="">2番目の投稿</a></h2>
         <p> こんにちは！ よろしくお願いします！ </p>
     </div>
+    <div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+            {{ post }}<br>
+        {% endfor %}
+    </div>
 </body>
 </html>
